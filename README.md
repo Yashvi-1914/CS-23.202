@@ -3,6 +3,9 @@
 
 
 [Program 2: WAP for 2D array](#assignment-2)
+
+
+[Program 3:WAP for Distance](#assignment-3)
 ## assignment-1
 ```
 import java.util.Scanner;
@@ -109,3 +112,60 @@ class test{
     }
     
 }
+## assignment-3
+```
+import java.util.Scanner;
+public class DisTest {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       Distance D1= new Distance();
+       Distance D2= new Distance();
+       Distance D3= new Distance();
+       
+       System.out.println("Enter first distance:");
+       D1.input();
+       System.out.println("Enter second distance:");
+       D2.input();
+       D3.add(D1,D2);
+       System.out.println("Result:");
+       D3.output();
+       
+      
+    }
+    
+}
+class Distance{
+    int mtr;
+    int cm;
+    int mm;
+    
+    void input(){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the value of mtr");
+        mtr= sc.nextInt();
+        System.out.println("Enter the value of cm");
+        cm= sc.nextInt();
+        System.out.println("Enter the value of mm");
+        mm= sc.nextInt();
+    }
+    
+    void output(){
+        System.out.println("Meters:" +mtr);
+        System.out.println("Centimeters:" +cm);
+        System.out.println("Millimeters:" +mm);
+    }
+    
+    void add(Distance O1, Distance O2){
+        this.mtr = O1.mtr + O2.mtr +(this.cm/100);
+        this.cm = O1.cm + O2.cm;
+        this.mm = O1.mm + O2.mm;
+        this.mm = this.mm % 10;
+        this.cm = this.cm % 100;
+    }
+}
+
+```
+<img width="1184" height="230" alt="image" src="https://github.com/user-attachments/assets/422856ac-1dd0-4ecd-b495-4df1bf2a2d7c" />
