@@ -1,4 +1,5 @@
 # CS-23.202
+[Program 1: WAP for 1D array](#assignment-1)
 ```
 import java.util.Scanner;
 public class ArrayTest {
@@ -47,6 +48,7 @@ class arr{
 
 <img width="1205" height="275" alt="image" src="https://github.com/user-attachments/assets/337dbfc9-d6b6-41c9-9866-6daad1298b6b" />
 
+[Program 2: WAP for 2D array](#assignment-2)
 ```
 import java.util.Scanner;
 public class Array_test {
