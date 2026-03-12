@@ -12,6 +12,9 @@
 
 
 [Program 5:WAP for the addition of 2 times where each time is given in hrs, mins,secs](#assignment-5)
+
+
+[Program 6:WAP for addition of 2 Distances where each distance is given in meters and cms](#assignment-6)
 ## assignment-1
 ```
 import java.util.Scanner;
@@ -278,6 +281,34 @@ class Time{
 
 ```
 <img width="1279" height="310" alt="image" src="https://github.com/user-attachments/assets/689956d4-ea6d-419d-aa78-df260902d888" />
+
+## assignment-6
+
+```
+
+Scanner sc = new Scanner(System.in);
+
+        Distance d1 = new Distance();
+        Distance d2 = new Distance();
+
+        System.out.println("Enter first distance:");
+        d1.input(sc);
+
+        System.out.println("Enter second distance:");
+        d2.input(sc);
+
+        Distance sum = d1.add(d2);
+
+        System.out.print("Total Distance = ");
+        sum.display();
+
+        sc.close();
+    }
+}
+
+```
+<img width="1265" height="278" alt="image" src="https://github.com/user-attachments/assets/b5f4dcb8-5a41-4831-b06a-6b6f77908e01" />
+
 
     
    
