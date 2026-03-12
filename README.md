@@ -9,6 +9,9 @@
 
 
 [Program 4:WAP for 4 methods addition, subtracton, multiplication, division and test all the methods in main](#assignment-4)
+
+
+[Program 5:WAP for the addition of 2 times where each time is given in hrs, mins,secs](#assignment-5)
 ## assignment-1
 ```
 import java.util.Scanner;
@@ -224,6 +227,63 @@ class Operations{
 
 ```
 <img width="1266" height="274" alt="image" src="https://github.com/user-attachments/assets/27baeed3-18f9-45f3-a963-8b2ac691ba76" />
+
+## assignment-5
+
+```
+import java.util.Scanner;
+public class TimeAddition {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter first time(hrs min sec):");
+      int h1 = sc.nextInt();
+      int m1 = sc.nextInt();
+      int s1 = sc.nextInt();
+      System.out.println("Enter second time(hrs min sec):");
+      int h2 = sc.nextInt();
+      int m2 = sc.nextInt();
+      int s2 = sc.nextInt();
+      Time t = new Time();
+      t.add(h1,m1,s1,h2,m2.s2);
+    }
+    
+}
+
+class Time{
+    int hrs;
+    int min;
+    int sec;
+    
+    void add(int h1,int m1,int s1,int h2,int m2,int s2){
+        sec = s1 + s2;
+        min = m1 + m2;
+        hrs = h1 + h2;
+        
+        if (sec >=60){
+            sec = sec - 60;
+            hrs = hrs + 1;
+        }
+        
+        if (min >=60){
+            min = min - 60;
+            hrs = hrs + 1;
+        }
+         System.out.println("Sum of Time = " +hrs +"hrs" +min +"min" +sec +"sec");
+    }
+}
+
+```
+<img width="1279" height="310" alt="image" src="https://github.com/user-attachments/assets/689956d4-ea6d-419d-aa78-df260902d888" />
+
+    
+   
+        
+
+
 
 
 
