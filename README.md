@@ -355,7 +355,7 @@ class Distance {
 
 ## assignment-7
 
-'''
+```
 
 import java.util.Scanner;
 public class timeadd {
@@ -419,7 +419,7 @@ class Time {
     }
 }
 
-'''
+```
 <img width="1264" height="282" alt="image" src="https://github.com/user-attachments/assets/0168fa16-df13-4b84-b117-985fae196587" />
 
 
