@@ -6,6 +6,9 @@
 
 
 [Program 3:WAP for Distance](#assignment-3)
+
+
+[Program 3:WAP for 4 metjods addition, subtracton, multiplication, division and test all the methods in main](#assignment-4)
 ## assignment-1
 ```
 import java.util.Scanner;
