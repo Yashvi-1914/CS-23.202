@@ -169,3 +169,46 @@ class Distance{
 
 ```
 <img width="1184" height="230" alt="image" src="https://github.com/user-attachments/assets/422856ac-1dd0-4ecd-b495-4df1bf2a2d7c" />
+## assignment-4
+```
+public class FourMethods {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+      Operations obj = new Operations();
+      obj.addition(10,5);
+      obj.subtraction(10,5);
+      obj.multiplication(10,5);
+      obj.division(10,5);
+    }
+    
+}
+
+class Operations{
+    int a;
+    int b;
+    
+    void addition(){
+        System.out.println("Addition = " + (a+b));
+    }
+    
+    void subtraction(){
+        System.out.println("Subtraction = "+ (a-b));
+    }
+    
+    void multiplication(){
+        System.out.println("Multiplication = " +(a*b));
+    }
+    
+    void division(){
+        System.out.println("Division = " +(a/b));
+    }
+}
+
+```
+<img width="1277" height="318" alt="image" src="https://github.com/user-attachments/assets/1496ac1a-03f5-4cd0-af05-5a1f38f1b04e" />
+
+
+
