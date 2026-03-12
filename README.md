@@ -15,6 +15,9 @@
 
 
 [Program 6:WAP for addition of 2 Distances where each distance is given in meters and cms](#assignment-6)
+
+
+[Program 7:WAP for addition of 2 Times where each time is given in hours and minutes](#assignment-7)
 ## assignment-1
 ```
 import java.util.Scanner;
@@ -308,6 +311,77 @@ Scanner sc = new Scanner(System.in);
 
 ```
 <img width="1265" height="278" alt="image" src="https://github.com/user-attachments/assets/b5f4dcb8-5a41-4831-b06a-6b6f77908e01" />
+
+## assignment-7
+
+'''
+
+import java.util.Scanner;
+public class timeadd {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+
+        Time t1 = new Time();
+        Time t2 = new Time();
+
+        System.out.println("Enter first time:");
+        t1.input(sc);
+
+        System.out.println("Enter second time:");
+        t2.input(sc);
+
+        Time sum = t1.add(t2);
+
+        System.out.print("Total Time = ");
+        sum.display();
+
+        sc.close();
+    }
+}
+  
+    
+
+
+class Time {
+    int hrs;
+    int mins;
+
+    void input(Scanner sc) {
+        System.out.print("Enter hours: ");
+        hrs = sc.nextInt();
+
+        System.out.print("Enter minutes: ");
+        mins = sc.nextInt();
+    }
+
+    Time add(Time t) {
+        Time result = new Time();
+
+        result.hrs = this.hrs + t.hrs;
+        result.mins = this.mins + t.mins;
+
+        // Convert minutes to hours if >= 60
+        if (result.mins >= 60) {
+            result.hrs += result.mins / 60;
+            result.mins = result.mins % 60;
+        }
+
+        return result;
+    }
+
+    void display() {
+        System.out.println(hrs + " hours " + mins + " minutes");
+    }
+}
+
+'''
+<img width="1264" height="282" alt="image" src="https://github.com/user-attachments/assets/0168fa16-df13-4b84-b117-985fae196587" />
+
+
 
 
     
