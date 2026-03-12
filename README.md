@@ -8,7 +8,7 @@
 [Program 3:WAP for Distance](#assignment-3)
 
 
-[Program 3:WAP for 4 metjods addition, subtracton, multiplication, division and test all the methods in main](#assignment-4)
+[Program 4:WAP for 4 methods addition, subtracton, multiplication, division and test all the methods in main](#assignment-4)
 ## assignment-1
 ```
 import java.util.Scanner;
@@ -172,6 +172,7 @@ class Distance{
 
 ```
 <img width="1184" height="230" alt="image" src="https://github.com/user-attachments/assets/422856ac-1dd0-4ecd-b495-4df1bf2a2d7c" />
+
 ## assignment-4
 
 ```
