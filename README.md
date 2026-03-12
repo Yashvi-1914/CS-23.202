@@ -289,7 +289,14 @@ class Time{
 
 ```
 
-Scanner sc = new Scanner(System.in);
+import java.util.Scanner;
+public class DistanceAddition {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
         Distance d1 = new Distance();
         Distance d2 = new Distance();
@@ -306,6 +313,40 @@ Scanner sc = new Scanner(System.in);
         sum.display();
 
         sc.close();
+    }
+}
+    }
+    
+}
+class Distance {
+    int meter;
+    int cm;
+
+    void input(Scanner sc) {
+        System.out.print("Enter meter: ");
+        meter = sc.nextInt();
+
+        System.out.print("Enter cm: ");
+        cm = sc.nextInt();
+    }
+
+    Distance add(Distance d) {
+        Distance result = new Distance();
+
+        result.cm = this.cm + d.cm;
+        result.meter = this.meter + d.meter;
+
+        // convert cm to meter if >= 100
+        if (result.cm >= 100) {
+            result.meter += result.cm / 100;
+            result.cm = result.cm % 100;
+        }
+
+        return result;
+    }
+
+    void display() {
+        System.out.println(meter + " meter " + cm + " cm");
     }
 }
 
