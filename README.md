@@ -21,6 +21,9 @@
 
 
 [Program 8:WAP to do the reverse of an 1D array with necessary number of methods for number of matrix operations like transpose, addition, multiplication, sum of rows, sum of columns, sum of diagonal](#assignment-8)
+
+
+[Program 9:Collect any 5 codes in c language like factorial,fabonnaci series, armstrong number , swapping of 2 numbers, pattern of stars. convert it in java object oriented language and test it in main](#assignment-9)
 ## assignment-1
 ```
 import java.util.Scanner;
@@ -581,6 +584,113 @@ class MatrixOperations {
 
 ```
 <img width="1280" height="282" alt="image" src="https://github.com/user-attachments/assets/d1290503-1eec-4db0-9bad-c0952ee7f189" />
+
+## assignment-9
+
+```
+
+import java.util.Scanner;
+public class MainProgram {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        BasicPrograms obj = new BasicPrograms();
+
+        System.out.print("Enter number for factorial: ");
+        int n = sc.nextInt();
+        obj.factorial(n);
+
+        System.out.print("Enter number of terms for Fibonacci: ");
+        int f = sc.nextInt();
+        obj.fibonacci(f);
+
+        System.out.print("Enter number to check Armstrong: ");
+        int a = sc.nextInt();
+        obj.armstrong(a);
+
+        System.out.print("Enter two numbers for swapping: ");
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+        obj.swap(x, y);
+
+        System.out.print("Enter rows for star pattern: ");
+        int p = sc.nextInt();
+        obj.starPattern(p);
+
+        sc.close();
+    }
+    
+}
+class BasicPrograms {
+
+    // Factorial
+    public void factorial(int n) {
+        int fact = 1;
+        for(int i = 1; i <= n; i++) {
+            fact = fact * i;
+        }
+        System.out.println("Factorial = " + fact);
+    }
+
+    // Fibonacci Series
+    public void fibonacci(int n) {
+        int a = 0, b = 1, c;
+        System.out.println("Fibonacci Series:");
+        for(int i = 1; i <= n; i++) {
+            System.out.print(a + " ");
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        System.out.println();
+    }
+
+    // Armstrong Number
+    public void armstrong(int num) {
+        int temp = num, sum = 0, r;
+
+        while(num > 0) {
+            r = num % 10;
+            sum = sum + (r * r * r);
+            num = num / 10;
+        }
+
+        if(sum == temp)
+            System.out.println(temp + " is Armstrong Number");
+        else
+            System.out.println(temp + " is Not Armstrong Number");
+    }
+
+    // Swapping Two Numbers
+    public void swap(int a, int b) {
+        int temp;
+        temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println("After Swapping:");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+
+    // Star Pattern
+    public void starPattern(int n) {
+        System.out.println("Star Pattern:");
+        for(int i = 1; i <= n; i++) {
+            for(int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+```
+<img width="1280" height="288" alt="image" src="https://github.com/user-attachments/assets/b5366150-964f-420b-b4da-92a4d0ba5fc4" />
+
 
 
 
