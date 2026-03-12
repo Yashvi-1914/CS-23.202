@@ -18,6 +18,9 @@
 
 
 [Program 7:WAP for addition of 2 Times where each time is given in hours and minutes](#assignment-7)
+
+
+[Program 8:WAP to do the reverse of an 1D array with necessary number of methods for number of matrix operations like transpose, addition, multiplication, sum of rows, sum of columns, sum of diagonal](#assignment-8)
 ## assignment-1
 ```
 import java.util.Scanner;
@@ -421,6 +424,164 @@ class Time {
 
 ```
 <img width="1264" height="282" alt="image" src="https://github.com/user-attachments/assets/0168fa16-df13-4b84-b117-985fae196587" />
+
+## assignment-8
+
+```
+
+import java.util.Scanner;
+public class MatrixMain {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+        MatrixOperations obj = new MatrixOperations();
+
+        // 1D Array Reverse
+        System.out.print("Enter size of array: ");
+        int n = sc.nextInt();
+
+        int arr[] = new int[n];
+
+        System.out.println("Enter array elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        obj.reverseArray(arr, n);
+
+        // Matrix Input
+        System.out.print("Enter rows and columns: ");
+        int r = sc.nextInt();
+        int c = sc.nextInt();
+
+        int a[][] = new int[r][c];
+        int b[][] = new int[r][c];
+
+        System.out.println("Enter first matrix:");
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                a[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Enter second matrix:");
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                b[i][j] = sc.nextInt();
+            }
+        }
+
+        obj.addMatrix(a, b, r, c);
+        obj.transpose(a, r, c);
+        obj.multiplyMatrix(a, b, r, c);
+        obj.sumRows(a, r, c);
+        obj.sumColumns(a, r, c);
+
+        if (r == c) {
+            obj.sumDiagonal(a, r);
+        } else {
+            System.out.println("Diagonal sum only for square matrix.");
+        }
+
+        sc.close();
+    }
+}
+    
+    
+
+class MatrixOperations {
+
+    // Reverse 1D Array
+    public void reverseArray(int arr[], int n) {
+        System.out.println("Reversed Array:");
+        for (int i = n - 1; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    // Matrix Addition
+    public void addMatrix(int a[][], int b[][], int r, int c) {
+        int sum[][] = new int[r][c];
+
+        System.out.println("Matrix Addition:");
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                sum[i][j] = a[i][j] + b[i][j];
+                System.out.print(sum[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    // Matrix Transpose
+    public void transpose(int a[][], int r, int c) {
+        System.out.println("Transpose of Matrix:");
+        for (int i = 0; i < c; i++) {
+            for (int j = 0; j < r; j++) {
+                System.out.print(a[j][i] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    // Matrix Multiplication
+    public void multiplyMatrix(int a[][], int b[][], int r, int c) {
+        int mul[][] = new int[r][c];
+
+        System.out.println("Matrix Multiplication:");
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                mul[i][j] = 0;
+                for (int k = 0; k < c; k++) {
+                    mul[i][j] += a[i][k] * b[k][j];
+                }
+                System.out.print(mul[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    // Sum of Rows
+    public void sumRows(int a[][], int r, int c) {
+        System.out.println("Sum of Rows:");
+        for (int i = 0; i < r; i++) {
+            int sum = 0;
+            for (int j = 0; j < c; j++) {
+                sum += a[i][j];
+            }
+            System.out.println("Row " + (i + 1) + " = " + sum);
+        }
+    }
+
+    // Sum of Columns
+    public void sumColumns(int a[][], int r, int c) {
+        System.out.println("Sum of Columns:");
+        for (int i = 0; i < c; i++) {
+            int sum = 0;
+            for (int j = 0; j < r; j++) {
+                sum += a[j][i];
+            }
+            System.out.println("Column " + (i + 1) + " = " + sum);
+        }
+    }
+
+    // Sum of Diagonal
+    public void sumDiagonal(int a[][], int n) {
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum += a[i][i];
+        }
+        System.out.println("Sum of Diagonal = " + sum);
+    }
+}
+
+```
+<img width="1280" height="282" alt="image" src="https://github.com/user-attachments/assets/d1290503-1eec-4db0-9bad-c0952ee7f189" />
+
 
 
 
