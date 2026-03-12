@@ -170,18 +170,29 @@ class Distance{
 ```
 <img width="1184" height="230" alt="image" src="https://github.com/user-attachments/assets/422856ac-1dd0-4ecd-b495-4df1bf2a2d7c" />
 ## assignment-4
+
 ```
+
+import java.util.Scanner;
 public class FourMethods {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      Operations obj = new Operations();
-      obj.addition(10,5);
-      obj.subtraction(10,5);
-      obj.multiplication(10,5);
-      obj.division(10,5);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter first number:");
+        int a = sc.nextInt();
+        System.out.println("Enter second number:");
+        int b = sc.nextInt();
+        
+        Operations obj = new Operations();
+        obj.addition(a,b);
+        obj.subtraction(a,b);
+        obj.multiplication(a,b);
+        obj.division(a,b);
+        
+     
     }
     
 }
@@ -208,7 +219,8 @@ class Operations{
 }
 
 ```
-<img width="1277" height="318" alt="image" src="https://github.com/user-attachments/assets/1496ac1a-03f5-4cd0-af05-5a1f38f1b04e" />
+<img width="1266" height="274" alt="image" src="https://github.com/user-attachments/assets/27baeed3-18f9-45f3-a963-8b2ac691ba76" />
+
 
 
 
