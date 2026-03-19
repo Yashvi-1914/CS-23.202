@@ -691,6 +691,51 @@ class BasicPrograms {
 ```
 <img width="1280" height="288" alt="image" src="https://github.com/user-attachments/assets/b5366150-964f-420b-b4da-92a4d0ba5fc4" />
 
+## assignment-10
+
+```
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Child1 c1 = new Child1();
+		Child2 c2 = new Child2();
+		
+		Parent p;
+		p = new Child1();
+		p.show();
+		p = new Child2();
+		p.show();
+		
+		
+		
+		c1.show();
+		c2.show();
+	}
+}
+
+class Parent{
+    void show(){
+        System.out.println("You are in parent class");
+    }
+}
+
+class Child1 extends Parent{
+    void show(){
+        System.out.println("You are in child 1");
+    }
+}
+
+class Child2 extends Parent{
+    void show(){
+        System.out.println("You are in child 2");
+    }
+}
+
+```
+<img width="1001" height="182" alt="image" src="https://github.com/user-attachments/assets/99c3d752-3537-4735-a177-acb56e174279" />
+
+
 
 
 
