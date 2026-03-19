@@ -24,6 +24,9 @@
 
 
 [Program 9:Collect any 5 codes in c language like factorial,fabonnaci series, armstrong number , swapping of 2 numbers, pattern of stars. convert it in java object oriented language and test it in main](#assignment-9)
+
+
+[Program 10:Demonstration of dynamic method dispatch](#assignment-10)
 ## assignment-1
 ```
 import java.util.Scanner;
