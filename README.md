@@ -27,6 +27,9 @@
 
 
 [Program 10:Demonstration of dynamic method dispatch](#assignment-10)
+
+
+[Program 11:WAP using three different classes and methods and print 1-100 three times with thread and without thread and analyse the result and repeat the same program using runnable interface](#assignment-11)
 ## assignment-1
 ```
 import java.util.Scanner;
@@ -737,6 +740,174 @@ class Child2 extends Parent{
 
 ```
 <img width="1001" height="182" alt="image" src="https://github.com/user-attachments/assets/99c3d752-3537-4735-a177-acb56e174279" />
+
+## assignment-11
+```
+public class MainClass {
+    public static void main(String args[])
+    {
+        A obj1 =  new A();
+        B obj2 = new B();
+        C obj3 = new C();
+        obj1.fun();
+        obj2.fun();
+        obj3.fun();
+    }
+    
+}
+class A
+{
+    public void fun()
+    {
+        for(int i=1;i<=100;i++)
+        {
+            System.out.println("A" + i);
+        }
+        System.out.println();
+    }
+}
+class B
+{
+    public void fun(){
+        for(int i=1;i<=100;i++)
+        {
+            System.out.println("B:" + i);
+        }
+        System.out.println();
+    }
+}
+class C
+{
+    public void fun()
+    {
+        for(int i=1;i<=100;i++)
+        {
+            System.out.println("C" + i);
+        }
+        System.out.println();
+    }
+}
+
+```
+<img width="1235" height="829" alt="image" src="https://github.com/user-attachments/assets/7ddb45f6-5b70-42b1-88bd-45fb60c67da8" />
+
+```
+public class NewMainClass {
+    
+    public static void main(String args[])
+    {
+        AA obj1 =  new AA();
+        BB obj2 = new BB();
+        CC obj3 = new CC();
+        obj1.start();
+        obj2.start();
+        obj3.start();
+    }
+    
+}
+class AA extends Thread
+{
+    
+    public void run()
+    {
+        for(int i=1;i<=100;i++)
+        {
+            System.out.println("AA" + i);
+        }
+        System.out.println();
+    }
+}
+class BB extends Thread
+{
+   
+    public void run()
+    {
+        for(int i=1;i<=100;i++)
+        {
+            System.out.println("BB:" + i);
+        }
+        System.out.println();
+    }
+}
+class CC extends Thread
+{
+    
+    public void run()
+    {
+        for(int i=1;i<=100;i++)
+        {
+            System.out.println("CC" + i);
+        }
+        System.out.println();
+    }
+}
+
+
+```
+<img width="1244" height="740" alt="image" src="https://github.com/user-attachments/assets/5350bbba-2744-4d84-a95c-739dbe8a5778" />
+
+```
+public class NewMClass {
+    
+    public static void main(String args[])
+    {
+        AAA obj1 =  new AAA();
+        BBB obj2 = new BBB();
+        CCC obj3 = new CCC();
+        
+        Thread th1 = new Thread(obj1);
+        Thread th2 = new Thread(obj2);
+        Thread th3 = new Thread(obj3);
+        
+        th1.start();
+        th2.start();
+        th3.start();
+    }
+    
+}
+class AAA implements Runnable
+{
+    
+    public void run()
+    {
+        for(int i=1;i<=100;i++)
+        {
+            System.out.println("AAA" + i);
+        }
+        System.out.println();
+    }
+}
+class BBB implements Runnable
+{
+   
+    public void run()
+    {
+        for(int i=1;i<=100;i++)
+        {
+            System.out.println("BBB:" + i);
+        }
+        System.out.println();
+    }
+}
+class CCC implements Runnable
+
+{
+    
+    public void run()
+    {
+        for(int i=1;i<=100;i++)
+        {
+            System.out.println("CCC" + i);
+        }
+        System.out.println();
+    }
+}
+
+```
+<img width="1240" height="677" alt="image" src="https://github.com/user-attachments/assets/aec708e6-47be-4063-9e5e-40ec872273cc" />
+
+
+
 
 
 
