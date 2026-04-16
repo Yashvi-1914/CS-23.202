@@ -30,6 +30,12 @@
 
 
 [Program 11:WAP using three different classes and methods and print 1-100 three times with thread and without thread and analyse the result and repeat the same program using runnable interface](#assignment-11)
+
+
+[Program 12:WAP to copy a file using character stream](#assignment-12)
+
+
+[Program 13:WAP to copy a file using byte stream](#assignment-13)
 ## assignment-1
 ```
 import java.util.Scanner;
@@ -905,6 +911,57 @@ class CCC implements Runnable
 
 ```
 <img width="1240" height="677" alt="image" src="https://github.com/user-attachments/assets/aec708e6-47be-4063-9e5e-40ec872273cc" />
+
+## assignment-12
+```
+import java.io.*;
+
+public class CharFileCopy {
+    public static void main(String[] args){
+        try{
+            FileReader fr = new FileReader("source.txt");
+            FileWriter fw = new FileWriter("dest_char.txt");
+            int ch;
+            while ((ch = fr.read())!=-1){
+                fw.write(ch);
+            }
+            fr.close();
+            fw.close();
+            System.out.println("File copied using character stream");
+        } catch(Exception e){
+            System.out.println(e);
+        }
+    }
+}
+```
+<img width="1231" height="515" alt="image" src="https://github.com/user-attachments/assets/21fac287-9ed5-4b05-8e2c-8f2f983b1025" />
+## assignment-13
+```
+import java.io.*;
+
+public class ByteFileCopy {
+    public static void main(String[] args){
+        try{
+            FileInputStream fis = new FileInputStream("source.txt");
+            FileOutputStream fos = new FileOutputStream("dest_byte.txt");
+            
+            int b;
+            while((b = fis.read())!= -1){
+                fos.write(b);
+            }
+            fis.close();
+            fos.close();
+            
+            System.out.println("File copied using byte stream");
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }
+}
+```
+<img width="1234" height="523" alt="image" src="https://github.com/user-attachments/assets/c75671bd-1ad3-45b4-b1ce-d2a0f5811073" />
+
+
 
 
 
