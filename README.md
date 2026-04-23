@@ -1000,6 +1000,36 @@ public class ArrayListDemo {
 ```
 <img width="1201" height="298" alt="image" src="https://github.com/user-attachments/assets/21a71dd7-b737-4417-ab98-032adb6a7c32" />
 
+## assignment-15
+```
+import java.util.*;
+public class LinkedListExample {
+    public static void main(String[] args){
+        LinkedList<String>list = new LinkedList<>();
+        list.add("Apple");
+        list.addFirst("Banana");
+        list.addLast("Mango");
+        
+        System.out.println("First:" + list.getFirst());
+        System.out.println("Last:" + list.getLast());
+        list.set(1,"Orange");
+        list.removeFirst();
+        list.removeLast();
+        
+        System.out.println("Size:" + list.size());
+        System.out.println("Elements");
+        for(String item: list){
+            System.out.println(item);
+        }
+        System.out.println("Conatins Orange?" +list.contains("Orange"));
+        list.clear();
+        System.out.println("Is Empty?" +list.isEmpty());
+    }
+}
+```
+<img width="1203" height="272" alt="image" src="https://github.com/user-attachments/assets/0c0d5683-5ade-43f1-9576-65fb24a73767" />
+
+
 
 
 
