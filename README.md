@@ -1029,6 +1029,69 @@ public class LinkedListExample {
 ```
 <img width="1203" height="272" alt="image" src="https://github.com/user-attachments/assets/0c0d5683-5ade-43f1-9576-65fb24a73767" />
 
+## assignment-16
+```
+import java.util.Stack;
+public class Main {
+    public static void main(String[] args){
+        Stack<Integer>stack = new Stack<>();
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        
+        System.out.println("Stack:" +stack);
+        System.out.println("Top element:" +stack.peek());
+        System.out.println("Removed:" +stack.pop());
+        System.out.println("Stack after pop:" +stack);
+    }
+}
+
+```
+<img width="1197" height="230" alt="image" src="https://github.com/user-attachments/assets/92890487-8184-40c6-b3f6-0d3dac71e39e" />
+
+## assignment-17
+```
+import java.util.HashMap;
+public class Main2 {
+    public static void main(String[] args){
+        HashMap<Integer,String>map = new HashMap<>();
+        map.put(1,"Apple");
+        map.put(2,"Banana");
+        map.put(3,"Mango");
+        
+        System.out.println(map.get(2));
+        map.remove(1);
+        System.out.println(map.containsKey(3));
+    }
+}
+
+```
+<img width="1162" height="166" alt="image" src="https://github.com/user-attachments/assets/efbada04-4b6f-40ed-b780-bab05070e0c4" />
+
+## assignment-18
+```
+import java.util.TreeSet;
+public class Main3{
+    public static void main(String[] args){
+        TreeSet<Integer>set = new TreeSet<>();
+        set.add(50);
+        set.add(10);
+        set.add(30);
+        set.add(20);
+        
+        System.out.println("TreeSet:" +set);
+        System.out.println("First:" +set.first());
+        System.out.println("Last:" +set.last());
+        
+        System.out.println("Higher than 20:" +set.higher(20));
+        set.remove(30);
+        System.out.println("After removal:" +set);
+    }
+}
+```
+<img width="1196" height="261" alt="image" src="https://github.com/user-attachments/assets/2542d4f9-8677-45aa-9a41-28732bf24335" />
+
+
 
 
 
