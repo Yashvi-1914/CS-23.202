@@ -965,6 +965,42 @@ public class ByteFileCopy {
 
 <img width="1234" height="523" alt="image" src="https://github.com/user-attachments/assets/c75671bd-1ad3-45b4-b1ce-d2a0f5811073" />
 
+## assignment-14
+```
+import java.util.*;
+public class ArrayListDemo {
+    public static void main(String[] args){
+        ArrayList<String>list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Mango");
+        
+        list.add(1,"Orange");
+        
+        System.out.println("Element at index 2:" +list.get(2));
+        
+        list.set(0,"Grapes");
+        
+        list.remove("Banana");
+        
+        System.out.println("Size: " +list.size());
+        
+        System.out.println("Contains mango?" +list.contains("Mango"));
+        
+        System.out.println("List elements:");
+        for(String item: list){
+            System.out.println(item);
+        }
+            list.clear();
+            System.out.println("Is Empty?" + list.isEmpty());
+        
+    }
+}
+
+```
+<img width="1201" height="298" alt="image" src="https://github.com/user-attachments/assets/21a71dd7-b737-4417-ab98-032adb6a7c32" />
+
+
 
 
 
