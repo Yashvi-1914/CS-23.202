@@ -1311,6 +1311,88 @@ public class NewJFrame extends javax.swing.JFrame {
 <img width="1280" height="949" alt="image" src="https://github.com/user-attachments/assets/1cbc17e0-9d1f-4d67-acd9-d4f368c01cea" />
 
 ## assignment-21
+```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class SimpleCalculator extends JFrame implements ActionListener {
+
+    JTextField num1Field, num2Field, resultField;
+    JButton addBtn, subBtn, mulBtn, divBtn;
+
+    public SimpleCalculator() {
+        setTitle("Simple Calculator");
+        setSize(350, 250);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new GridLayout(5, 2, 10, 10));
+
+        add(new JLabel("Enter Number 1:"));
+        num1Field = new JTextField();
+        add(num1Field);
+
+        add(new JLabel("Enter Number 2:"));
+        num2Field = new JTextField();
+        add(num2Field);
+
+        add(new JLabel("Result:"));
+        resultField = new JTextField();
+        resultField.setEditable(false);
+        add(resultField);
+
+        addBtn = new JButton("Add");
+        subBtn = new JButton("Subtract");
+        mulBtn = new JButton("Multiply");
+        divBtn = new JButton("Divide");
+
+        add(addBtn);
+        add(subBtn);
+        add(mulBtn);
+        add(divBtn);
+
+        addBtn.addActionListener(this);
+        subBtn.addActionListener(this);
+        mulBtn.addActionListener(this);
+        divBtn.addActionListener(this);
+
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        try {
+            double num1 = Double.parseDouble(num1Field.getText().trim());
+            double num2 = Double.parseDouble(num2Field.getText().trim());
+            double result = 0;
+
+            if (e.getSource() == addBtn) {
+                result = num1 + num2;
+            } else if (e.getSource() == subBtn) {
+                result = num1 - num2;
+            } else if (e.getSource() == mulBtn) {
+                result = num1 * num2;
+            } else if (e.getSource() == divBtn) {
+                if (num2 == 0) {
+                    resultField.setText("Cannot divide by zero");
+                    return;
+                }
+                result = num1 / num2;
+            }
+
+            resultField.setText(String.format("%.2f", result)); // rounded output
+
+        } catch (NumberFormatException ex) {
+            resultField.setText("Invalid input!");
+        }
+    }
+
+    public static void main(String[] args) {
+        new SimpleCalculator();
+    }
+}
+```
+<img width="253" height="179" alt="image" src="https://github.com/user-attachments/assets/ad081f39-8f60-420f-86b5-f2ca4ea2bf4b" />
+
+
 
 
 
