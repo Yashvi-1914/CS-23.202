@@ -1188,7 +1188,7 @@ public class Division {
             System.out.println("Error: " + e.getMessage());
         }
     }
-}
+
 ```
 <img width="859" height="223" alt="image" src="https://github.com/user-attachments/assets/5eb0e478-60bc-4019-8b2a-130c9b848006" />
 
