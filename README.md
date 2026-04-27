@@ -1392,6 +1392,215 @@ public class SimpleCalculator extends JFrame implements ActionListener {
 ```
 <img width="253" height="179" alt="image" src="https://github.com/user-attachments/assets/ad081f39-8f60-420f-86b5-f2ca4ea2bf4b" />
 
+## assignment-22
+```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class SimplePaint extends JFrame {
+
+    private String currentShape = "Rectangle"; // Default shape
+    private Color currentColor = Color.BLACK;  // Default color
+    private boolean fillShape = false;         // Default outline only
+
+    public SimplePaint() {
+        // Basic Frame Setup
+        setTitle("Java Swing Shape Drawer");
+        setSize(600, 500);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new BorderLayout());
+
+        // 1. Create the Drawing Canvas
+        JPanel canvas = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.setColor(currentColor);
+
+                if (currentShape.equals("Rectangle")) {
+                    if (fillShape) {
+                        g.fillRect(150, 100, 300, 200);
+                    } else {
+                        g.drawRect(150, 100, 300, 200);
+                    }
+                } else if (currentShape.equals("Oval")) {
+                    if (fillShape) {
+                        g.fillOval(150, 100, 300, 200);
+                    } else {
+                        g.drawOval(150, 100, 300, 200);
+                    }
+                }
+            }
+        };
+        canvas.setBackground(Color.WHITE);
+
+        // 2. Create the Control Panel (Buttons)
+        JPanel controls = new JPanel();
+        controls.setLayout(new FlowLayout());
+
+        // Shape Buttons
+        JButton rectBtn = new JButton("Rectangle");
+        JButton ovalBtn = new JButton("Oval");
+        
+        // Color Buttons
+        JButton redBtn = new JButton("Red");
+        JButton blackBtn = new JButton("Black");
+        
+        // Fill/Outline Toggle
+        JButton fillToggle = new JButton("Fill: OFF");
+
+        // 3. Add Action Listeners
+        rectBtn.addActionListener(e -> { currentShape = "Rectangle"; canvas.repaint(); });
+        ovalBtn.addActionListener(e -> { currentShape = "Oval"; canvas.repaint(); });
+        redBtn.addActionListener(e -> { currentColor = Color.RED; canvas.repaint(); });
+        blackBtn.addActionListener(e -> { currentColor = Color.BLACK; canvas.repaint(); });
+        
+        fillToggle.addActionListener(e -> {
+            fillShape = !fillShape;
+            fillToggle.setText("Fill: " + (fillShape ? "ON" : "OFF"));
+            canvas.repaint();
+        });
+
+        // Add buttons to the control panel
+        controls.add(rectBtn);
+        controls.add(ovalBtn);
+        controls.add(new JSeparator(JSeparator.VERTICAL));
+        controls.add(redBtn);
+        controls.add(blackBtn);
+        controls.add(fillToggle);
+
+        // Add components to frame
+        add(canvas, BorderLayout.CENTER);
+        add(controls, BorderLayout.SOUTH);
+    }
+
+    public static void main(String[] args) {
+        // Run the GUI on the Event Dispatch Thread
+        SwingUtilities.invokeLater(() -> {
+            new SimplePaint().setVisible(true);
+        });
+    }
+}
+```
+<img width="436" height="368" alt="image" src="https://github.com/user-attachments/assets/308bc2c3-ebbd-40f0-9ba8-800d4db8df7e" />
+
+## assignment-23
+```
+import javax.swing.*;
+import java.awt.*;
+import java.util.Date;
+import java.util.Random;
+
+public class MultiFunctionGUI extends JFrame {
+
+    public MultiFunctionGUI() {
+        // --- Frame Configuration ---
+        setTitle("10-Function Pro GUI");
+        setSize(800, 500);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null); // Center on screen
+        setLayout(new BorderLayout(10, 10));
+
+        // Display area for feedback
+        JLabel statusLabel = new JLabel("Click a button to interact", SwingConstants.CENTER);
+        statusLabel.setFont(new Font("SansSerif", Font.BOLD, 16));
+        statusLabel.setBorder(BorderFactory.createEtchedBorder());
+
+        // --- Button Panel (GridLayout: 2 rows, 5 columns) ---
+        JPanel buttonPanel = new JPanel(new GridLayout(2, 5, 10, 10));
+        buttonPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+
+        // 1. Time Display
+        JButton btn1 = new JButton("Current Time");
+        btn1.addActionListener(e -> statusLabel.setText("Now: " + new Date().toString()));
+
+        // 2. Random Background Color
+        JButton btn2 = new JButton("Surprise Color");
+        btn2.addActionListener(e -> {
+            Random rand = new Random();
+            Color randomColor = new Color(rand.nextInt(256), rand.nextInt(256), rand.nextInt(256));
+            buttonPanel.setBackground(randomColor);
+            statusLabel.setText("Background updated!");
+        });
+
+        // 3. Dialog Message
+        JButton btn3 = new JButton("Pop-up Alert");
+        btn3.addActionListener(e -> JOptionPane.showMessageDialog(this, "This is a Swing Alert!"));
+
+        // 4. Increase Window Size
+        JButton btn4 = new JButton("Grow Window");
+        btn4.addActionListener(e -> setSize(getWidth() + 20, getHeight() + 20));
+
+        // 5. Input Dialog (Math)
+        JButton btn5 = new JButton("Square Root");
+        btn5.addActionListener(e -> {
+            String input = JOptionPane.showInputDialog("Enter a number:");
+            try {
+                double val = Double.parseDouble(input);
+                statusLabel.setText("√" + val + " = " + Math.sqrt(val));
+            } catch (Exception ex) {
+                statusLabel.setText("Invalid input!");
+            }
+        });
+
+        // 6. Toggle Visibility
+        JButton btn6 = new JButton("Ghost Button");
+        btn6.setToolTipText("I will disappear!");
+        btn6.addActionListener(e -> btn6.setVisible(false));
+
+        // 7. Reset UI
+        JButton btn7 = new JButton("Reset All");
+        btn7.addActionListener(e -> {
+            buttonPanel.setBackground(null);
+            setSize(800, 500);
+            btn6.setVisible(true);
+            statusLabel.setText("UI has been reset.");
+        });
+
+        // 8. System Properties
+        JButton btn8 = new JButton("OS Info");
+        btn8.addActionListener(e -> statusLabel.setText("OS: " + System.getProperty("os.name")));
+
+        // 9. Change Font Style
+        JButton btn9 = new JButton("Fancy Font");
+        btn9.addActionListener(e -> statusLabel.setFont(new Font("Serif", Font.ITALIC | Font.BOLD, 22)));
+
+        // 10. Exit Application
+        JButton btn10 = new JButton("Close App");
+        btn10.setBackground(new Color(255, 100, 100));
+        btn10.addActionListener(e -> System.exit(0));
+
+        // Add all buttons to the grid
+        buttonPanel.add(btn1);
+        buttonPanel.add(btn2);
+        buttonPanel.add(btn3);
+        buttonPanel.add(btn4);
+        buttonPanel.add(btn5);
+        buttonPanel.add(btn6);
+        buttonPanel.add(btn7);
+        buttonPanel.add(btn8);
+        buttonPanel.add(btn9);
+        buttonPanel.add(btn10);
+
+        // --- Final Assembly ---
+        add(statusLabel, BorderLayout.NORTH);
+        add(buttonPanel, BorderLayout.CENTER);
+    }
+
+    public static void main(String[] args) {
+        // Run in the Event Dispatch Thread (Swing Standard)
+        SwingUtilities.invokeLater(() -> {
+            new MultiFunctionGUI().setVisible(true);
+        });
+    }
+}
+```
+<img width="585" height="365" alt="image" src="https://github.com/user-attachments/assets/e1879f9e-a12e-4ced-9437-6b7f81b29e50" />
+<img width="584" height="368" alt="image" src="https://github.com/user-attachments/assets/0fdd6b38-215e-4daf-80f4-396647ffb639" />
+
+
 
 
 
