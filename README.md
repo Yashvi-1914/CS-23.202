@@ -874,7 +874,8 @@ class CC extends Thread
 
 
 ```
-<img width="1244" height="740" alt="image" src="https://github.com/user-attachments/assets/5350bbba-2744-4d84-a95c-739dbe8a5778" />
+<img width="573" height="430" alt="image" src="https://github.com/user-attachments/assets/287bfda7-2eb7-48cb-9193-097ac1befdbb" />
+
 
 ```
 public class NewMClass {
