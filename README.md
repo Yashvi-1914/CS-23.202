@@ -35,32 +35,32 @@
 [Program 12:WAP to analyse the result and repeat the program 11 using runnable interface.](#assignment-12)
 
 
-[Program 12:WAP to copy a file using character stream](#assignment-12)
+[Program 13:WAP to copy a file using character stream](#assignment-13)
 
 
-[Program 13:WAP to copy a file using byte stream](#assignment-13)
+[Program 14:WAP to copy a file using byte stream](#assignment-14)
 
 
-[Program 14:Write a Java program to demonstrate the use of ArrayList by performing operations such as adding elements, removing elements, searching for an element, updating elements, and iterating through the list.](#assignment-14)
+[Program 15:Write a Java program to demonstrate the use of ArrayList by performing operations such as adding elements, removing elements, searching for an element, updating elements, and iterating through the list.](#assignment-15)
 
 
-[Program 15:Write a Java program to implement LinkedList and perform insertion at the beginning, middle, and end, along with deletion, searching, and displaying the elements.](#assignment-15)
+[Program 16:Write a Java program to implement LinkedList and perform insertion at the beginning, middle, and end, along with deletion, searching, and displaying the elements.](#assignment-16)
 
 
-[Program 16:Write a Java program to demonstrate Stack operations using the Collection Framework, including push, pop, peek, and checking whether the stack is empty.](#assignment-16)
+[Program 17:Write a Java program to demonstrate Stack operations using the Collection Framework, including push, pop, peek, and checking whether the stack is empty.](#assignment-17)
 
 
-[Program 17:Write a Java program to implement HashMap and perform operations such as inserting key-value pairs, retrieving values using keys, removing entries, and iterating through the map.](#assignment-17)
+[Program 18:Write a Java program to implement HashMap and perform operations such as inserting key-value pairs, retrieving values using keys, removing entries, and iterating through the map.](#assignment-18)
 
 
-[Program 18:Write a Java program to demonstrate TreeMap by inserting elements, displaying them in sorted order, searching for a key, and removing elements.](#assignment-18)
+[Program 19:Write a Java program to demonstrate TreeMap by inserting elements, displaying them in sorted order, searching for a key, and removing elements.](#assignment-19)
 
 
 
-[Program 19:Implement a Java class Division with methods for integer division, floating-point division, division with remainder, and dividing multiple numbers by a given divisor. Ensure division by zero is properly handled with exceptions.](#assignment-19)
+[Program 20:Implement a Java class Division with methods for integer division, floating-point division, division with remainder, and dividing multiple numbers by a given divisor. Ensure division by zero is properly handled with exceptions.](#assignment-20)
 
 
-[Program 20:
+[Program 21:
 
 
 ## assignment-1
@@ -1034,7 +1034,7 @@ public class ArrayListDemo {
 ```
 <img width="1201" height="298" alt="image" src="https://github.com/user-attachments/assets/21a71dd7-b737-4417-ab98-032adb6a7c32" />
 
-## assignment-15
+## assignment-16
 ```
 import java.util.*;
 public class LinkedListExample {
@@ -1063,7 +1063,7 @@ public class LinkedListExample {
 ```
 <img width="1203" height="272" alt="image" src="https://github.com/user-attachments/assets/0c0d5683-5ade-43f1-9576-65fb24a73767" />
 
-## assignment-16
+## assignment-17
 ```
 import java.util.Stack;
 public class Main {
@@ -1083,7 +1083,7 @@ public class Main {
 ```
 <img width="1197" height="230" alt="image" src="https://github.com/user-attachments/assets/92890487-8184-40c6-b3f6-0d3dac71e39e" />
 
-## assignment-17
+## assignment-18
 ```
 import java.util.HashMap;
 public class Main2 {
@@ -1102,7 +1102,7 @@ public class Main2 {
 ```
 <img width="1162" height="166" alt="image" src="https://github.com/user-attachments/assets/efbada04-4b6f-40ed-b780-bab05070e0c4" />
 
-## assignment-18
+## assignment-19
 ```
 import java.util.TreeSet;
 public class Main3{
@@ -1125,7 +1125,7 @@ public class Main3{
 ```
 <img width="1196" height="261" alt="image" src="https://github.com/user-attachments/assets/2542d4f9-8677-45aa-9a41-28732bf24335" />
 
-## assignment-19
+## assignment-20
 ```
 public class Division {
 
@@ -1199,7 +1199,7 @@ public class Division {
 ```
 <img width="859" height="223" alt="image" src="https://github.com/user-attachments/assets/5eb0e478-60bc-4019-8b2a-130c9b848006" />
 
-## assignment-20
+## assignment-21
 
 ```
 import java.awt.Color;
@@ -1345,7 +1345,7 @@ public class NewJFrame extends javax.swing.JFrame {
 ```
 <img width="1280" height="949" alt="image" src="https://github.com/user-attachments/assets/1cbc17e0-9d1f-4d67-acd9-d4f368c01cea" />
 
-## assignment-21
+## assignment-22
 ```
 import javax.swing.*;
 import java.awt.*;
@@ -1427,7 +1427,7 @@ public class SimpleCalculator extends JFrame implements ActionListener {
 ```
 <img width="253" height="179" alt="image" src="https://github.com/user-attachments/assets/ad081f39-8f60-420f-86b5-f2ca4ea2bf4b" />
 
-## assignment-22
+## assignment-23
 ```
 import javax.swing.*;
 import java.awt.*;
@@ -1521,7 +1521,7 @@ public class SimplePaint extends JFrame {
 ```
 <img width="436" height="368" alt="image" src="https://github.com/user-attachments/assets/308bc2c3-ebbd-40f0-9ba8-800d4db8df7e" />
 
-## assignment-23
+## assignment-24
 ```
 import javax.swing.*;
 import java.awt.*;
@@ -1658,7 +1658,7 @@ public class MultiFunctionGUI extends JFrame {
 
 <img width="589" height="368" alt="image" src="https://github.com/user-attachments/assets/d80edd20-5e48-4580-b20b-054912094439" />
 
-## assignment-24
+## assignment-25
 ```
 package com.myapp; 
 
