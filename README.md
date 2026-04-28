@@ -60,7 +60,10 @@
 [Program 20:Implement a Java class Division with methods for integer division, floating-point division, division with remainder, and dividing multiple numbers by a given divisor. Ensure division by zero is properly handled with exceptions.](#assignment-20)
 
 
-[Program 21:
+[Program 21:Write a Java Swing program that allows freehand drawing with the mouse, where users can change the drawing color using buttons (red, black, blue, magenta) and adjust the brush size using a slider.](#assignment-21)
+
+
+[Program 22:
 
 
 ## assignment-1
