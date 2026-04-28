@@ -63,7 +63,10 @@
 [Program 21:Write a Java Swing program that allows freehand drawing with the mouse, where users can change the drawing color using buttons (red, black, blue, magenta) and adjust the brush size using a slider.](#assignment-21)
 
 
-[Program 22:
+[Program 22:Write a Java Swing program to design a simple calculator GUI that takes two inputs and performs addition, subtraction, multiplication, and division, displaying the result in an output field.](#assignment-22)
+
+
+[Program 23:
 
 
 ## assignment-1
