@@ -66,7 +66,13 @@
 [Program 22:Write a Java Swing program to design a simple calculator GUI that takes two inputs and performs addition, subtraction, multiplication, and division, displaying the result in an output field.](#assignment-22)
 
 
-[Program 23:
+[Program 23:Write a Java Swing program that creates a GUI with buttons to draw and fill shapes (rectangle, oval) and change their colors (red, black) using the Graphics class.](#assignment-23)
+
+
+[Program 24:Create a GUI using JFrame that contains 10 buttons, each with different functionalities or structure.](#assignment-24)
+
+
+[Program 25:WAP to demonstrate the creation of a user-defined package using a sub-package structure and access its members from a driver class outside the hierarchy](#assignment-25)
 
 
 ## assignment-1
