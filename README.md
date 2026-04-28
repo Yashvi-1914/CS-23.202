@@ -29,8 +29,10 @@
 [Program 10:Demonstration of dynamic method dispatch](#assignment-10)
 
 
-[Program 11:WAP using three different classes and methods and print 1-100 three times with thread and  without thread and analyse the result and repeat the same program using runnable interface](#assignment-11)
+[Program 11:WAP using three different classes and methods and print 1-100 three times with thread and without thread](#assignment-11)
 
+
+[Program 12:WAP to analyse the result and repeat the program 11 using runnable interface.](#assignment-12)
 
 
 [Program 12:WAP to copy a file using character stream](#assignment-12)
@@ -878,6 +880,10 @@ class CC extends Thread
 
 <img width="573" height="430" alt="image" src="https://github.com/user-attachments/assets/287bfda7-2eb7-48cb-9193-097ac1befdbb" />
 
+
+## assignment-12
+
+
 ```
 
 public class NewMClass {
@@ -940,7 +946,7 @@ class CCC implements Runnable
 
 <img width="1240" height="677" alt="image" src="https://github.com/user-attachments/assets/aec708e6-47be-4063-9e5e-40ec872273cc" />
 
-## assignment-12
+## assignment-13
 ```
 import java.io.*;
 
@@ -965,7 +971,7 @@ public class CharFileCopy {
 <img width="1231" height="515" alt="image" src="https://github.com/user-attachments/assets/21fac287-9ed5-4b05-8e2c-8f2f983b1025" />
 
 
-## assignment-13
+## assignment-14
 ```
 import java.io.*;
 
@@ -993,7 +999,7 @@ public class ByteFileCopy {
 
 <img width="1234" height="523" alt="image" src="https://github.com/user-attachments/assets/c75671bd-1ad3-45b4-b1ce-d2a0f5811073" />
 
-## assignment-14
+## assignment-15
 ```
 import java.util.*;
 public class ArrayListDemo {
