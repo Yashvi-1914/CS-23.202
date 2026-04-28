@@ -821,6 +821,7 @@ class C
 
 ```
 <img width="1235" height="829" alt="image" src="https://github.com/user-attachments/assets/7ddb45f6-5b70-42b1-88bd-45fb60c67da8" />
+
 ```
 public class NewMainClass {
     
@@ -872,12 +873,13 @@ class CC extends Thread
     }
 }
 
-
 ```
+
+
 <img width="573" height="430" alt="image" src="https://github.com/user-attachments/assets/287bfda7-2eb7-48cb-9193-097ac1befdbb" />
 
-
 ```
+
 public class NewMClass {
     
     public static void main(String args[])
@@ -935,6 +937,7 @@ class CCC implements Runnable
 }
 
 ```
+
 <img width="1240" height="677" alt="image" src="https://github.com/user-attachments/assets/aec708e6-47be-4063-9e5e-40ec872273cc" />
 
 ## assignment-12
